@@ -30,11 +30,19 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+React allows for development of an app where the state is changing or not static.
+
 1. Describe component state.
+
+State is an object which is managed within a component.
 
 1. Describe props.
 
+Properties that are passed into a component.
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+effects that happen outside of the scope of the function being executed.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
