@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
 import Character from './components/Character';
+import styled from 'styled-components';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -22,14 +24,34 @@ const App = () => {
       });
   }, []);
 
+  const List = styled.li`
+    list-style: none;
+  `;
+
+  const FlexBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: auto;
+  `;
+
   return (
-    <div className="App">
+    <div className="App container-fluid">
       <h1 className="Header">Characters</h1>
+      <FlexBox>
       {character.map((i) => (
-        <li key={i}>
-          <Character name={i.name} />
-        </li>
+        <List key={i}>
+          <Character 
+          name={i.name}
+          birth={i.birth_year} 
+          gender={i.gender} 
+          height={i.height}
+          weight={i.mass}
+           />
+        </List>
       ))}
+      </FlexBox>
     </div>
   );
 };
